@@ -76,32 +76,48 @@ After experimenting, I implemented an **interactive mode** that lets users selec
 
 ## Packaging & Usage
 
-Run the app directly with Python:
-
-```bash
-python src/batch_renamer.py
-````
-
-Or use the pre-built executables (Windows):
-
-* **Single executable:**
-  `batch_renamer_single.exe` — simple double-click runnable without dependencies
-
-* **Folder package:**
-  `batch_renamer_folder/` — contains all dependencies and files
+Great! Here’s a neat README section you can add to explain how to build the `.exe` and how users can download your pre-built executables from the GitHub Releases page:
 
 ---
 
-## Building Executables Yourself
+### Building the Executable (.exe) Using PyInstaller
 
-Use PyInstaller commands:
+If you want to create the executable file yourself, follow these steps:
 
-```bash
-pyinstaller --onefile --name batch_renamer_single batch_renamer.py
-pyinstaller --onedir --name batch_renamer_folder batch_renamer.py
-```
+1. **Install PyInstaller** (if you haven't already):
+
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. **Navigate to the project directory** containing `batch_renamer.py`:
+
+   ```bash
+   cd path/to/batch-renamer
+   ```
+
+3. **Build a single executable** (all-in-one `.exe`):
+
+   ```bash
+   pyinstaller --onefile --name batch_renamer_single batch_renamer.py
+   ```
+
+4. **Build a folder-based executable** (creates a folder with dependencies):
+
+   ```bash
+   pyinstaller --onedir --name batch_renamer_folder batch_renamer.py
+   ```
+
+5. The generated executable(s) will be located in the `dist` folder created by PyInstaller.
 
 ---
+
+### Download Pre-built Executables
+
+You can download the ready-to-use executable files from the **Releases** section of this repository:
+
+* **batch\_renamer\_single.exe** — A standalone executable that can be run by double-clicking.
+* **batch\_renamer\_folder** — A folder containing the executable along with all required dependencies.
 
 ## Future Plans
 
